@@ -18,3 +18,26 @@
   cursor: pointer !important;
 }
 
+#col-left-form {
+  margin-right: 20px;
+}
+
+.title-col-form {
+  font-size: 22px;
+  color: #006f6b;
+  margin-bottom: 22px;
+}
+
+#col-right-form {
+  margin-right: 20px;
+}
+
+.btn-main:active {
+  outline: none !important;
+  background-color: #006f6b !important;
+}
+
+.btn-main:focus {
+  background-color: #006f6b !important;
+}
+

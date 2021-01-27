@@ -1,3 +1,9 @@
+<?php 
+session_start();
+if (!isset($_SESSION["autenticado"])) {
+    session_destroy();
+    header("location:/odontosync/src/index.html");
+} ?>
 <!DOCTYPE html>
 <html style="background: #f6f6f6;">
 
@@ -23,7 +29,7 @@
                     <li class="nav-item text-white"><a class="nav-link text-white" href="pages/about-us.html">sobre</a></li>
                     <li class="nav-item text-white"><a class="nav-link text-white" href="pages/pricing.html">tratamentos</a></li>
                     <li class="nav-item text-white"><a class="nav-link text-white" href="contact-us.html">contato</a></li>
-                    <li class="nav-item"><a class="nav-link btn bg-white btn-acess" href="#">sair</a></li>
+                    <li class="nav-item"><a class="nav-link btn bg-white btn-acess" href="../assets/php/logout.php">sair</a></li>
                 </ul>
             </div>
         </div>
@@ -32,7 +38,7 @@
         <section class="clean-block payment-form dark" style="padding-bottom: 70px;">
             <div class="container">
                 <div class="d-flex justify-content-between block-heading">
-                    <h2 class="title-client">Olá, Telma</h2>
+                    <h2 class="title-client">Olá, <?php echo $_SESSION["primeiroNome"];?></h2>
                     <div><a class="btn btn-primary btn-lg btn-main" role="button" data-toggle="modal" href="#myModal">Agendar</a><div role="dialog" tabindex="-1" class="modal fade" id="myModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -67,30 +73,32 @@
                             <thead>
                                 <tr>
                                     <th>Nome</th>
-                                    <th>Telma Konishi Taiara<br></th>
+                                    <th>
+                                         <?php echo $_SESSION["nome"];?><br>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Nome de usuário</td>
-                                    <td>teKo</td>
+                                    <td><?php echo $_SESSION["usuario"];?></td>
                                 </tr>
                                 <tr>
                                     <td>Email</td>
-                                    <td>telmakonishi@gmail.com</td>
+                                    <td><?php echo $_SESSION["email"];?></td>
                                 </tr>
                                 <tr>
                                     <td>Data de nascimento</td>
-                                    <td>99 / 99 / 9999<br></td>
+                                    <td><?php echo $_SESSION["data_nascimento"];?><br></td>
                                 </tr>
                                 <tr></tr>
                                 <tr>
                                     <td>Telefone</td>
-                                    <td>84 9967468803<br></td>
+                                    <td><?php echo $_SESSION["telefone"];?><br></td>
                                 </tr>
                                 <tr>
                                     <td>Cidade/UF</td>
-                                    <td>Nova Cruz/RN</td>
+                                    <td><?php echo $_SESSION["cidade"];?></td>
                                 </tr>
                             </tbody>
                         </table>

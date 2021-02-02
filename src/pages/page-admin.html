@@ -35,10 +35,10 @@
                 <div class="text-left" style="background: #ffffff;border-style: none;border-radius: 10px;padding-top: 10px;padding-right: 10px;padding-bottom: 32px;padding-left: 15px;">
                     <h3 class="title-table" style="margin-bottom: 22px;">Calendário de Atendimento</h3>
                     <div>
-                        <form class="form-default" method="POST" action="#" style="width: 100%;min-width: 250px;max-width: none;padding-top: 10px;padding-right: 10px;padding-bottom: 10px;padding-left: 10px;">
+                        <form class="form-default" method="POST" action="../assets/php/process_agenda.php" style="width: 100%;min-width: 250px;max-width: none;padding-top: 10px;padding-right: 10px;padding-bottom: 10px;padding-left: 10px;">
                             <div class="form-row d-flex justify-content-between" style="padding-top: 10px;padding-right: 10px;padding-bottom: 10px;padding-left: 10px;">
                                 <div class="col col-md-3">
-                                    <div class="form-group"><label>Dia de Atendimento</label><input class="form-control" type="date" name="serviceDay"></div>
+                                    <div class="form-group"><label>Dia de Atendimento</label><input class="form-control" type="date" name=""></div>
                                 </div>
                                 <div class="col col-md-3">
                                     <div class="form-group"><label>Inicio do expediente</label><input class="form-control" type="time" name="starHour"></div>
@@ -48,7 +48,7 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="col d-flex justify-content-end"><button class="btn btn-primary btn-main" type="button">Cadastrar Horário</button></div>
+                                <div class="col d-flex justify-content-end"><button class="btn btn-primary btn-main" type="button" name="ok">Cadastrar Horário</button></div>
                             </div>
                         </form>
                     </div>

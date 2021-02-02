@@ -64,11 +64,11 @@ insert into Historico values('d@i.o','a@a.o','21/01/15','17:30','arranquei o den
 insert into Agenda_dentista values('a@a.o','2021/01/15',6);
 insert into Horarios values('d@i.o','a@a.o','21/01/15','17:30');
 
--- select * from Pessoa;
+ select * from Pessoa;
 -- select * from Cliente;
 -- select * from Dentista;
 -- select * from Historico;
--- select * from Agenda_dentista;
+ select * from Agenda_dentista;
 -- select * from Horarios;
 -- select * from ;
 -- drop database odontosync;

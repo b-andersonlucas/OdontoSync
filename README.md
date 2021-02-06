@@ -12,6 +12,7 @@
 ## :bookmark: Sobre
 
 O **OdontoSync** é uma aplicação Web desenvolvida para facilitar o agendamento em clínicas odontológicas . Esta aplicação oferece aos clientes a possibilidade de agendar e visualizar seu histórico de consulta(s). Para os administradores do sistema, a aplicação fornece ferramentas para selecionar os dias de atendimentos, além de também visualizar o hostórico de consulta de clientes entre outras funcionalidades.
+Poderíamos adicionar um texto explicando que somos uma empresa de tecnologia de modo a contribuir com/para a sociedade mas ao invés disso preferimos dizer - Viemos para atualizar de modo mais fácil e prático a comunicação cliente e seu dentista preferido.
   
 Este projeto faz parte de uma avaliação na disciplina de **Programação para Internet**
 

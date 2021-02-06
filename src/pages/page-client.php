@@ -18,6 +18,7 @@ if (!isset($_SESSION["autenticado"])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <link rel="stylesheet" href="../assets/css/pages-client-styles.css">
     <link rel="stylesheet" href="../assets/css/smoothproducts.css">
+    <link rel="shortcut icon" href="/src/assets/img/favicon-96x96.png" type="image/x-icon">
 </head>
 
 <body style="background: #f6f6f6;">

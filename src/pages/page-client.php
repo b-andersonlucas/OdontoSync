@@ -106,6 +106,29 @@ if (!isset($_SESSION["autenticado"])) {
                 </div>
             </div>
         </section>
+        <section class="clean-block payment-form dark" style="padding-bottom: 70px;">
+            <div class="container">
+                <div class="text-left" style="background: white;border-radius: 10px;padding-top: 15px;padding-bottom: 15px;padding-right: 12px;padding-left: 12px;">
+                    <h3 class="title-table" style="margin-bottom: 22px;">Horário Agendado</h3>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Dia</th>
+                                    <th>Hora</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>00/00/00</td>
+                                    <td>00:00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="clean-block payment-form dark" style="padding-top: 7px;">
             <div class="container">
                 <div class="text-left" style="background: #ffffff;border-style: none;border-radius: 10px;padding-top: 10px;padding-right: 10px;padding-bottom: 10px;padding-left: 15px;">

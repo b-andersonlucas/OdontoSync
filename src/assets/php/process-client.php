@@ -9,12 +9,12 @@ if (isset($_SESSION["autenticado"])) {
 session_destroy();
 
 if (isset($_POST["ok"])) {
-    $user = isset($_POST["user"])?$_POST["user"]:"";
+    $usuario = isset($_POST["user"])?$_POST["user"]:"";
     $password = isset($_POST["password"])?$_POST["password"]:"";
 
     include('connection.php');
 
-    $sql = "SELECT email, nome, telefone, usuario, cidade, data_nascimento FROM pessoa, cliente WHERE usuario = '$user' and senha = '$password'";
+    $sql = "SELECT email, nome, telefone, usuario, cidade, data_nascimento FROM pessoa, cliente WHERE usuario = '$usuario' and senha = '$password'";
 
     $resultado = mysqli_query($con, $sql);
 

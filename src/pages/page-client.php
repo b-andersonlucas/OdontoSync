@@ -3,7 +3,8 @@ session_start();
 if (!isset($_SESSION["autenticado"])) {
     session_destroy();
     header("location:/odontosync/src/index.html");
-} ?>
+}
+?>
 <!DOCTYPE html>
 <html style="background: #f6f6f6;">
 

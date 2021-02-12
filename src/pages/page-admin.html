@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="background-color: #f6f6f6;">
 
 <head>
     <meta charset="utf-8">
@@ -17,7 +17,7 @@
     <link rel="shortcut icon" href="/src/assets/img/favicon-96x96.png" type="image/x-icon">
 </head>
 
-<body><nav class="navbar navbar-light navbar-expand-lg fixed-top text-white bg-white clean-navbar">
+<body style="background-color: #f6f6f6;"><nav class="navbar navbar-light navbar-expand-lg fixed-top text-white bg-white clean-navbar">
         <div class="container"><a class="navbar-brand text-white logo" href="../index.html">OdontoSync</a><button data-toggle="collapse" class="navbar-toggler text-white" data-target="#navcol-1"><span class="text-white sr-only">Toggle navigation</span><span class="navbar-toggler-icon text-white"></span></button>
             <div class="collapse navbar-collapse text-white" id="navcol-1">
                 <ul class="nav navbar-nav text-white ml-auto">
@@ -74,9 +74,11 @@
                     <h3 class="title-table" style="margin-bottom: 22px;">Cadastrar Consulta</h3>
                     <div>
                         <form class="form-default" style="padding-top: 10px;padding-right: 10px;padding-bottom: 10px;padding-left: 10px;">
-                            <div class="form-group"><label>Nome</label><input class="form-control" type="text"></div>
-                            <div class="form-group"><label>E-mail</label><input class="form-control" type="email"></div>
-                            <div class="form-group"><label>Procedimento</label><input class="form-control" type="text"></div>
+                            <div class="form-group"><label>Nome</label><input class="form-control" type="text" name=""></div>
+                            <div class="form-group"><label>E-mail</label><input class="form-control" type="email" name=""></div>
+                            <div class="form-group"><label>Procedimento</label><input class="form-control" type="text" name=""></div>
+                            <div class="form-group"><label>Data</label><input class="form-control" type="date" name=""></div>
+                            <div class="form-group"><label>Hora</label><input class="form-control" type="time" name=""></div>
                             <div class="form-group"><label>Dentista</label><select class="form-control">
                                     <optgroup label="This is a group">
                                         <option value="12" selected="">Selecione o dentista</option>

@@ -19,7 +19,7 @@
 
 <body style="background: #f6f6f6;">
     <nav class="navbar navbar-light navbar-expand-lg fixed-top text-white bg-white clean-navbar">
-        <div class="container"><a class="navbar-brand text-white logo" href="../index.html">OdontoSync</a><button data-toggle="collapse" class="navbar-toggler text-white" data-target="#navcol-1"><span class="text-white sr-only">Toggle navigation</span><span class="navbar-toggler-icon text-white"></span></button>
+        <div class="container"><a class="navbar-brand text-white logo" href="page-admin.html">OdontoSync</a><button data-toggle="collapse" class="navbar-toggler text-white" data-target="#navcol-1"><span class="text-white sr-only">Toggle navigation</span><span class="navbar-toggler-icon text-white"></span></button>
             <div class="collapse navbar-collapse text-white" id="navcol-1">
                 <ul class="nav navbar-nav text-white ml-auto">
                     <li class="nav-item text-white"><a class="nav-link text-white" href="page-admin.html">Pág. Admin</a></li>
@@ -135,13 +135,12 @@
                     <h3 class="title-table" style="margin-bottom: 22px;">Informar Retorno</h3>
                     <div>
                         <form class="form-default" style="padding-top: 10px;padding-right: 10px;padding-bottom: 10px;padding-left: 10px;">
-                            <div class="form-group"><label>Email</label><input class="form-control" type="email"></div>
-                            <div class="form-group"><label>Nome</label><input class="form-control" type="text"></div>
-                            <div class="form-group"><label>Telefone</label><input class="form-control" type="tel"></div>
-                            <div class="form-group"><label>Dia de retorno</label><input class="form-control" type="date"></div>
-                            <div class="form-group"><label>Mensagem</label><textarea class="form-control"></textarea></div>
+                            <div class="form-group"><label>Nome</label><input class="form-control" type="text" id="name_client"></div>
+                            <div class="form-group"><label>Telefone</label><input class="form-control" type="tel" id="tel_client"></div>
+                            <div class="form-group"><label>Dia de retorno</label><input class="form-control" type="date" id="date_return"></div>
+                            <div class="form-group"><label>Mensagem</label><textarea class="form-control" id="msg_return"></textarea></div>
                             <div class="form-row">
-                                <div class="col text-right"><button class="btn btn-primary btn-main" type="submit">Enviar mensagem</button></div>
+                                <div class="col text-right"><a class="btn btn-primary btn-main" id="link_send_msg" onclick="send_msg_return()" target="blank">Enviar mensagem</a></div>
                             </div>
                         </form>
                     </div>
@@ -195,6 +194,7 @@
     <script src="../assets/js/smoothproducts.min.js"></script>
     <script src="../assets/js/theme.js"></script>
     <script src="https://kit.fontawesome.com/1404112e2c.js" crossorigin="anonymous"></script>
+    <script src="../assets/js/send_msg.js"></script>
 </body>
 
 </html>

@@ -6,7 +6,7 @@ create table Pessoa(
 email  VARCHAR (50)  primary key NOT null,
 usuario char(20) NOT null,
 senha char(15) NOT null,
-priv_pessoa char(1) NOT null,
+priv_pessoa char(1) NOT null, -- if priv = "c" or "d" login in adm page
 nome varchar(35) NOT null,
 telefone char(15)
 );
@@ -33,9 +33,9 @@ codigo_registro char(10)
 create table Historico(
 Cliente_email VARCHAR (50),
 FOREIGN KEY  (Cliente_email) REFERENCES Cliente(pessoa_email),
-dentista_email VARCHAR (50),
-FOREIGN KEY (dentista_email) REFERENCES Dentista(pessoa_email),
-dia date,
+nome_cliente char(50), -- criar um campo pro nome ok(x)
+nome_dentista char(50), -- substituir o email do dentista pelo nome 
+dia date primary key,
 hora time,
 procedimento varchar(450)
 );
@@ -60,9 +60,9 @@ horario time
 
 insert into Pessoa values('d@i.o', 'dickson', '123', 'c', 'dickson teixeira', '(84) 99999-9999');
 insert into Cliente values ('d@i.o', 'serrinha', '2002/02/22');
-insert into Pessoa values('a@a.o', 'cavalo', '123', 'd', 'zé', '(00) 90000-0000');
+insert into Pessoa values('a@a.o', 'cavalo', '123', 'd', 'ze', '(00) 90000-0000');
 insert into Dentista values('a@a.o','0003222');
-insert into Historico values('d@i.o','a@a.o','21/01/15','17:30','arranquei o dente pela raiz');
+insert into Historico values('d@i.o','dickson','ze','21/01/15','17:30','arranquei o dente pela raiz'); -- mudar email pelo nome e inserir o nome ok(x)
 insert into Agenda_dentista values('a@a.o','2021/01/15',6,'08:30','18:30');
 insert into Horarios values('d@i.o','a@a.o','21/01/15','17:30');
 
@@ -70,8 +70,8 @@ insert into Horarios values('d@i.o','a@a.o','21/01/15','17:30');
 -- select * from Pessoa;
 -- select * from Cliente;
 -- select * from Dentista;
--- select * from Historico;
--- select * from Agenda_dentista;
+ select * from Historico;
+ select * from Agenda_dentista;
 -- select * from Horarios;
 -- select * from ;
 

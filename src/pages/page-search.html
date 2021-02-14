@@ -41,8 +41,8 @@
                         <div class="form-row padMar">
                             <div class="col padMar">
                                 <div class="input-group">
-                                    <div class="input-group-prepend"></div><input class="form-control autocomplete" type="text" placeholder="Pesquisar">
-                                    <div class="input-group-append"><button class="btn btn-primary btn-main" type="button"><i class="fa fa-search"></i></button></div>
+                                    <div class="input-group-prepend"></div><input id="searchClient" class="form-control autocomplete" type="text" placeholder="Pesquisar">
+                                    <div class="input-group-append"><button id="btn_search" class="btn btn-primary btn-main" type="button"><i class="fa fa-search"></i></button></div>
                                 </div>
                             </div>
                         </div>
@@ -58,15 +58,11 @@
                                     <th>Email<br></th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="tableSearch">
                                 <tr>
-                                    <td>Fulano de tal</td>
-                                    <td>fulanodetal@gmail.com</td>
+                                    <td>-</td>
+                                    <td>-</td>
                                 </tr>
-                                <tr></tr>
-                                <tr></tr>
-                                <tr></tr>
-                                <tr></tr>
                             </tbody>
                         </table>
                     </div>
@@ -80,8 +76,8 @@
                     <div class="form-row padMar">
                         <div class="col padMar">
                             <div class="input-group">
-                                <div class="input-group-prepend"></div><input class="form-control" type="text" placeholder="E-mail do cliente">
-                                <div class="input-group-append"><button class="btn btn-primary btn-main" type="button"><i class="fa fa-arrow-right"></i></button></div>
+                                <div class="input-group-prepend"></div><input id="inputView" class="form-control" type="text" placeholder="E-mail do cliente">
+                                <div class="input-group-append"><button id="btn_view" class="btn btn-primary btn-main" type="button"><i class="fa fa-arrow-right"></i></button></div>
                             </div>
                         </div>
                     </div>
@@ -95,35 +91,8 @@
                         </div>
                     </div>
                     <div class="table-responsive">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Nome</th>
-                                    <th>Fulano de tal</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr></tr>
-                                <tr></tr>
-                                <tr></tr>
-                                <tr></tr>
-                                <tr>
-                                    <td>E-mail</td>
-                                    <td>fulanodetal@gmail.com</td>
-                                </tr>
-                                <tr>
-                                    <td>Data de nascimento</td>
-                                    <td>99/99/99</td>
-                                </tr>
-                                <tr>
-                                    <td>Telefone</td>
-                                    <td>99999999992</td>
-                                </tr>
-                                <tr>
-                                    <td>Cidade/UF</td>
-                                    <td>Nova Cruz/RN</td>
-                                </tr>
-                            </tbody>
+                        <table id="tableData" class="table">
+                            
                         </table>
                     </div>
                 </div>
@@ -132,7 +101,7 @@
         <section id="service-return" class="clean-block payment-form dark" style="padding-top: 7px;padding-right: 0px;padding-bottom: 65px;">
             <div class="container">
                 <div class="text-left" style="background: #ffffff;border-style: none;border-radius: 10px;padding-top: 10px;padding-right: 10px;padding-bottom: 32px;padding-left: 15px;">
-                    <h3 class="title-table" style="margin-bottom: 22px;">Informar Retorno</h3>
+                    <h3 class="title-table d-flex justify-content-between" style="margin-bottom: 22px;">Informar Retorno <small id="btn_load" class="btn btn-primary btn-main" style="font-size: 14px;">Carregar Nome</small></h3>
                     <div>
                         <form class="form-default" style="padding-top: 10px;padding-right: 10px;padding-bottom: 10px;padding-left: 10px;">
                             <div class="form-group"><label>Nome</label><input class="form-control" type="text" id="name_client"></div>
@@ -165,16 +134,12 @@
                                     <th>Dentista</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr></tr>
-                                <tr></tr>
-                                <tr></tr>
-                                <tr></tr>
+                            <tbody id="tableHistoric">
                                 <tr>
-                                    <td>99/99/99</td>
-                                    <td>99:99</td>
-                                    <td>Limpeza</td>
-                                    <td>Mandibula</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -195,6 +160,7 @@
     <script src="../assets/js/theme.js"></script>
     <script src="https://kit.fontawesome.com/1404112e2c.js" crossorigin="anonymous"></script>
     <script src="../assets/js/send_msg.js"></script>
+    <script src="../assets/js/searchClient.js"></script>
 </body>
 
 </html>

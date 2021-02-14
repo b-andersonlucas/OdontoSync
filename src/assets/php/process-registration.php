@@ -12,6 +12,8 @@ $usuario = isset($_POST["usuario"])?$_POST["usuario"]:"";
 $senha = isset($_POST["senha"])?$_POST["senha"]:"";
 $nome = isset($_POST["nome"])?$_POST["nome"]:"";
 $telefone = isset($_POST["telefone"])?$_POST["telefone"]:"";
+$cidade = isset($_POST["cidade"])?$_POST["cidade"]:"";
+$data_nascimento = isset($_POST["data_nascimento"])?$_POST["data_nascimento"]:"";
 
 
 
@@ -27,7 +29,11 @@ if ($email != "" && $usuario != ""){
                 header("location:/odontosync/src/pages/registration.php");
         }
 
-        $sql = "INSERT INTO `Pessoa` (email, usuario, senha, nome, telefone) VALUES ('$email', '$usuario', '$senha', '$nome', '$telefone');";
+        $sql = "INSERT INTO `Pessoa` (email, usuario, senha, nome, telefone, priv_pessoa) VALUES ('$email', '$usuario', '$senha', '$nome', '$telefone', 'c');"; 
+        
+        mysqli_query($con, $sql);
+
+        $sql = "INSERT INTO `cliente` (pessoa_email, cidade, data_nascimento)  VALUES ('$email','$cidade', '$data_nascimento');";
 
         mysqli_query($con, $sql);
 

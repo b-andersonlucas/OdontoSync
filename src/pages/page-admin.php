@@ -1,3 +1,4 @@
+<?php include '../assets/php/fetchs/get_dentist.php'; ?>
 <!DOCTYPE html>
 <html>
 
@@ -61,6 +62,12 @@
                             <div class="form-group"><label>Inicio do expediente</label><input class="form-control" type="time" name="starHour"></div>
                             <div class="form-group"><label>Fim do expediente</label><input class="form-control" type="time" name="endHour"></div>
                             <div class="form-group"><label>Nº de Clientes</label><input class="form-control" type="number" name="numClients"></div>
+                            <div class="form-group"><label>Dentista</label><select class="form-control" name="dentist">
+                                <optgroupS>
+                                    <option value="12" selected="">Selecione o dentista</option>
+                                    <?php echo getDentists(); ?>
+                                </optgroup>
+                            </select></div>
                             <div class="form-row">
                                 <div class="col d-flex justify-content-end"><button class="btn btn-primary btn-main" type="submit" name="cadsHour">Cadastrar Horário</button></div>
                             </div>
@@ -82,10 +89,9 @@
                             <div class="form-group"><label>Data</label><input class="form-control" type="date" name="day"></div>
                             <div class="form-group"><label>Hora</label><input class="form-control" type="time" name="hour"></div>
                             <div class="form-group"><label>Dentista</label><select class="form-control" name="dentist">
-                                    <optgroup label="This is a group">
+                                    <optgroup>
                                         <option value="12" selected="">Selecione o dentista</option>
-                                        <option value="13">This is item 2</option>
-                                        <option value="14">This is item 3</option>
+                                        <?php echo getDentists(); ?>
                                     </optgroup>
                                 </select></div>
                             <div class="form-row">

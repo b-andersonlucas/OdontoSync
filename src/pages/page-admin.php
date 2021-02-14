@@ -42,12 +42,12 @@
                         <form class="form-default" style="width: 100%;min-width: 250px;max-width: none;padding-top: 10px;padding-right: 10px;padding-bottom: 10px;padding-left: 10px;">
                             <div class="form-row d-flex justify-content-between" style="padding-top: 10px;padding-right: 10px;padding-bottom: 10px;padding-left: 10px;">
                                 <div class="col col-md-3">
-                                    <div class="form-group"><label>Dia de Atendimento</label><input class="form-control" type="date"></div>
+                                    <div class="form-group"><label>Dia de Atendimento</label><input id="date_sch" class="form-control" type="date"></div>
                                 </div>
-                                <div class="col d-flex justify-content-end" style="height: 40px;"><button class="btn btn-primary btn-main" type="button">Visualizar</button></div>
+                                <div class="col d-flex justify-content-end" style="height: 40px;"><button id="btn_sch" class="btn btn-primary btn-main" type="button">Visualizar</button></div>
                             </div>
                         </form>
-                        <ul class="list-group">
+                        <ul class="list-group" id = "listClients">
                             <li class="list-group-item"><span>Fulano de tal</span></li>
                             <li class="list-group-item"><span>Telma</span></li>
                         </ul>
@@ -489,6 +489,7 @@
     <script src="../assets/js/smoothproducts.min.js"></script>
     <script src="../assets/js/theme.js"></script>
     <script src="https://kit.fontawesome.com/1404112e2c.js" crossorigin="anonymous"></script>
+    <script src="../assets/js/view_schedules.js"></script>
 </body>
 
 </html>

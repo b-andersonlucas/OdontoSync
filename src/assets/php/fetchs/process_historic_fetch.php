@@ -10,9 +10,6 @@
 
     while($row = mysqli_fetch_array($result_selectHistoric))  
     {
-        if($row == null || $row == '') {
-            
-        } else{
             $dateProce = date("d/m/Y", strtotime($row["dia"]));
             $outputHistoric .= '  
             <tr>  
@@ -23,7 +20,6 @@
 
             </tr>  
             ';
-        }
     }  
 
     echo $outputHistoric;

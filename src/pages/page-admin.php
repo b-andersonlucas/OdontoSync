@@ -56,8 +56,7 @@
                 <div class="text-left" style="background: #ffffff;border-style: none;border-radius: 10px;padding-top: 10px;padding-right: 10px;padding-bottom: 32px;padding-left: 15px;">
                     <h3 class="title-table" style="margin-bottom: 22px;">Calendário de Atendimento</h3>
                     <div>
-                        <a name="form-anchor"></a>
-                        <form class="form-default" method="POST" action="../assets/php/process_admin.php #form-anchor" name="schedule" style="padding-top: 10px;padding-right: 10px;padding-bottom: 10px;padding-left: 10px;">
+                        <form class="form-default" method="POST" action="../assets/php/process_admin.php" name="schedule" style="padding-top: 10px;padding-right: 10px;padding-bottom: 10px;padding-left: 10px;">
                             <div class="form-group"><label>Dia de Atendimento</label><input class="form-control" type="date" name="serviceDay"></div>
                             <div class="form-group"><label>Inicio do expediente</label><input class="form-control" type="time" name="starHour"></div>
                             <div class="form-group"><label>Fim do expediente</label><input class="form-control" type="time" name="endHour"></div>

@@ -41,8 +41,7 @@ procedimento varchar(450)
 );
 
 create table Agenda_dentista(
-dentista_email VARCHAR (50),
-FOREIGN KEY (dentista_email) REFERENCES Dentista(pessoa_email),
+nome_dentista char(50), -- mudar email pelo nome ok (x)
 dia date primary key,
 n_clientes int(5),
 inicio_ex time,
@@ -63,7 +62,7 @@ insert into Cliente values ('d@i.o', 'serrinha', '2002/02/22');
 insert into Pessoa values('a@a.o', 'cavalo', '123', 'd', 'ze', '(00) 90000-0000');
 insert into Dentista values('a@a.o','0003222');
 insert into Historico values('d@i.o','dickson','ze','21/01/15','17:30','arranquei o dente pela raiz'); -- mudar email pelo nome e inserir o nome ok(x)
-insert into Agenda_dentista values('a@a.o','2021/01/15',6,'08:30','18:30');
+insert into Agenda_dentista values('ze','2021/01/15',6,'08:30','18:30'); -- mudar email pelo nome (ok)
 insert into Horarios values('d@i.o','a@a.o','21/01/15','17:30');
 
 

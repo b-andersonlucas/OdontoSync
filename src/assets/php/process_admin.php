@@ -12,7 +12,7 @@ if (isset($_POST['cadsHour'])) {
 
     include('connection.php');
 
-    $email = isset($_POST[""]) ? $_POST[""] : "";
+    $nomeD = isset($_POST["dentist"]) ? $_POST["dentist"] : "";
     $email1 = "a@a.o";
     $dataInicial = isset($_POST["serviceDay"]) ? $_POST["serviceDay"] : "";
     $inicoEX = isset($_POST["starHour"]) ? $_POST["starHour"] : "";
@@ -21,11 +21,13 @@ if (isset($_POST['cadsHour'])) {
 
     $dataFinal = str_replace("-", "/", $dataInicial);
 
-    $sql = "insert into Agenda_dentista values('$email1','$dataFinal',$numeroPacientes,'$inicoEX','$fimEX');";
+    echo "$nomeD</br>";
+
+    $sql = "insert into Agenda_dentista values('$nomeD','$dataFinal',$numeroPacientes,'$inicoEX','$fimEX');";
 
     mysqli_query($con, $sql) or die(" falha ao inserir ");
 
-    header("location:/odontosync/src/pages/page-admin.html");
+    header("location:/odontosync/src/pages/page-admin.php");
     //String Dcont = dataN.substring(0,2);
     //String Mcont = dataN.substring(3,5);
     //String Acont = dataN.substring(6);
@@ -75,8 +77,9 @@ if (isset($_POST['medRecord'])) {
     $sql2 = "insert into Historico values('$emailClient','$nome','$dentist','$dataFinal2','$hora','$procedure');";
 
     mysqli_query($con, $sql2) or die(" falha ao inserir ");
-    header("location:/odontosync/src/pages/page-admin.html");
+    header("location:/odontosync/src/pages/page-admin.php");
 
+    /*
     echo "$nome <br>";
     echo "$emailClient <br>";
     echo "$procedure <br>";
@@ -85,6 +88,7 @@ if (isset($_POST['medRecord'])) {
     echo "$hora <br>";
     echo "$dentist <br>";
     echo "$sql2 <br>";
+    */
     //insert into Historico values('d@i.o','dickson','ze','21/01/15','17:30','arranquei o dente pela raiz');
     //insert into Historico values('d@i.o','a@a.o','21/01/15','17:30','arranquei o dente pela raiz');
     

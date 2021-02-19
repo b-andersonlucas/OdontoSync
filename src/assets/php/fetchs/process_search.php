@@ -7,6 +7,8 @@
 
     $result_selectPeoples = mysqli_query($con, $sql_select_peoples);
 
+    mysqli_close($con);
+
     while($row = mysqli_fetch_array($result_selectPeoples))  
     {  
          $outputSearch .= '  
@@ -17,5 +19,9 @@
          ';  
     }  
 
-    echo $outputSearch;
+    if($outputSearch == '') {
+          echo $outputSearch .= 'Usuário não encontrado!';
+     } else {
+          echo $outputSearch;
+     }         
 ?>

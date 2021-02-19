@@ -2,8 +2,8 @@
     include '../connection.php';
     $outputList = '';
     
-    $email = $_POST['date_str'];
-    $sql_select_schedule = "SELECT pessoa.nome, dia, priv_pessoa FROM `horarios` INNER JOIN pessoa ON dia = '".$email."' AND priv_pessoa = 'c'";
+    $datePK = $_POST['date_str'];
+    $sql_select_schedule = "SELECT pessoa.nome, dia, priv_pessoa FROM `horarios` INNER JOIN pessoa ON dia = '".$datePK."' AND priv_pessoa = 'c'";
 
     $result_selectSchedule = mysqli_query($con, $sql_select_schedule);
 

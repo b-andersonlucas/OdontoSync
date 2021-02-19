@@ -22,5 +22,9 @@
             ';
     }  
 
-    echo $outputHistoric;
+    if($outputHistoric == '' ) {
+        echo $outputHistoric .= 'Histórico indisponível!';
+    } else {
+        echo $outputHistoric;
+    }
 ?>

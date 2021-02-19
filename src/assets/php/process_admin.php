@@ -93,3 +93,6 @@ if (isset($_POST['medRecord'])) {
     //insert into Historico values('d@i.o','a@a.o','21/01/15','17:30','arranquei o dente pela raiz');
     
 }
+if(){
+    
+}

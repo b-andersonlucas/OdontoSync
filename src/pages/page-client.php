@@ -87,11 +87,11 @@ if (!isset($_SESSION["autenticado"])) {
                                 </tr>
                                 <tr>
                                     <td>Email</td>
-                                    <td><?php echo $_SESSION["email"];?></td>
+                                    <td id="email"><?php echo $_SESSION["email"];?></td>
                                 </tr>
                                 <tr>
                                     <td>Data de nascimento</td>
-                                    <td><?php echo $_SESSION["data_nascimento"];?><br></td>
+                                    <td><?php echo date("d/m/Y", strtotime($_SESSION["data_nascimento"]));?><br></td>
                                 </tr>
                                 <tr></tr>
                                 <tr>
@@ -120,10 +120,10 @@ if (!isset($_SESSION["autenticado"])) {
                                     <th>Hora</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="horarioAgendado">
                                 <tr>
-                                    <td>00/00/00</td>
-                                    <td>00:00</td>
+                                    <td>-</td>
+                                    <td>-</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -145,16 +145,12 @@ if (!isset($_SESSION["autenticado"])) {
                                     <th>Dentista</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr></tr>
-                                <tr></tr>
-                                <tr></tr>
-                                <tr></tr>
+                            <tbody id="tabelaHistorico">
                                 <tr>
-                                    <td>99/99/99</td>
-                                    <td>99:99</td>
-                                    <td>Limpeza</td>
-                                    <td>Eren Jeager</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -173,6 +169,7 @@ if (!isset($_SESSION["autenticado"])) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
     <script src="../assets/js/smoothproducts.min.js"></script>
     <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/page-client-scripts.js"></script>
 </body>
 
 </html>

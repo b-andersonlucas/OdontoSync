@@ -19,7 +19,7 @@
 </head>
 
 <body style="background-color: #f6f6f6;"><nav class="navbar navbar-light navbar-expand-lg fixed-top text-white bg-white clean-navbar">
-        <div class="container"><a class="navbar-brand text-white logo" href="../index.html">OdontoSync</a><button data-toggle="collapse" class="navbar-toggler text-white" data-target="#navcol-1"><span class="text-white sr-only">Toggle navigation</span><span class="navbar-toggler-icon text-white"></span></button>
+        <div class="container"><a class="navbar-brand text-white logo" href="page-admin.php">OdontoSync</a><button data-toggle="collapse" class="navbar-toggler text-white" data-target="#navcol-1"><span class="text-white sr-only">Toggle navigation</span><span class="navbar-toggler-icon text-white"></span></button>
             <div class="collapse navbar-collapse text-white" id="navcol-1">
                 <ul class="nav navbar-nav text-white ml-auto">
                     <li class="nav-item text-white"><a class="nav-link text-white" href="#service-calendar">Atendimento</a></li>
@@ -48,8 +48,7 @@
                             </div>
                         </form>
                         <ul class="list-group" id = "listClients">
-                            <li class="list-group-item"><span>Fulano de tal</span></li>
-                            <li class="list-group-item"><span>Telma</span></li>
+                            <li class="list-group-item"><span>-</span></li>
                         </ul>
                     </div>
                 </div>
@@ -455,13 +454,11 @@
                                             </optgroup>
                                         
                                     </select></div>
-                                <div class="form-group"><label>CR do Dentista</label><input class="form-control" type="text" required="" minlength="1" maxlength="1"></div>
                             </div>
                             <div class="col" id="col-right-form" style="width: 45%;min-width: 250px;max-width: 100%;">
                                 <h1 class="title-col-form">Dados de acesso</h1>
                                 <div class="form-group"><label>Usuário</label><input class="form-control" type="text" required=""></div>
                                 <div class="form-group"><label>Email</label><input class="form-control" type="email" required=""></div>
-                                <div class="form-group"><label>Privilégio de usuário</label><input class="form-control" type="text" required="" minlength="1" maxlength="1"></div>
                                 <div class="form-group"><label>Senha</label><input class="form-control" type="password" required=""></div>
                                 <div class="form-group"><label>Confirmar senha</label><input class="form-control" type="password" required="">
                                 </div><button class="btn btn-primary btn-main btn-block" type="button">Cadastrar</button>

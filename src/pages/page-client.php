@@ -1,5 +1,6 @@
 <?php 
 session_start();
+include('../assets/php/fetchs/get_dataHorario.php');
 if (!isset($_SESSION["autenticado"])) {
     session_destroy();
     header("location:/odontosync/src/index.html");
@@ -51,13 +52,14 @@ if (!isset($_SESSION["autenticado"])) {
                 <form action="#" class="form-default p-3" id="form-schedule">
                     <div class="form-group mt-2">
                         <label for="inputDate">Data</label>
-                        <select class="form-control" name="date" id="inputDate">
+                        <select class="form-control" name="date" id="inputDia"> 
                             <option value="" selected>Selecione</option>
+                            <?php echo diasAtendimento(); ?>
                         </select>
                     </div>
                     <div class="form-group mt-3 mb-5">
-                        <label for="inputHour">Horário</label>
-                        <select name="hour" id="inputHour" class="form-control">
+                        <label for="inputHora">Horário</label>
+                        <select name="hour" id="inputHora" class="form-control">
                             <option value="#" selected>Selecione</option>
                         </select>
                     </div>

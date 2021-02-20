@@ -1,4 +1,4 @@
-<?php include '../assets/php/fetchs/get_dentist.php'; ?>
+<?php include '../assets/php/fetchs/get_dentista.php'; ?>
 <!DOCTYPE html>
 <html>
 
@@ -42,12 +42,12 @@
                         <form class="form-default" style="width: 100%;min-width: 250px;max-width: none;padding-top: 10px;padding-right: 10px;padding-bottom: 10px;padding-left: 10px;">
                             <div class="form-row d-flex justify-content-between" style="padding-top: 10px;padding-right: 10px;padding-bottom: 10px;padding-left: 10px;">
                                 <div class="col col-md-3">
-                                    <div class="form-group"><label>Dia de Atendimento</label><input id="date_sch" class="form-control" type="date"></div>
+                                    <div class="form-group"><label>Dia de Atendimento</label><input id="dia_atend" class="form-control" type="date"></div>
                                 </div>
-                                <div class="col d-flex justify-content-end" style="height: 40px;"><button id="btn_sch" class="btn btn-primary btn-main" type="button">Visualizar</button></div>
+                                <div class="col d-flex justify-content-end" style="height: 40px;"><button id="btn_atend" class="btn btn-primary btn-main" type="button">Visualizar</button></div>
                             </div>
                         </form>
-                        <ul class="list-group" id = "listClients">
+                        <ul class="list-group" id = "listaClientes">
                             <li class="list-group-item"><span>-</span></li>
                         </ul>
                     </div>
@@ -63,7 +63,7 @@
                             <div class="form-group"><label>Dentista</label><select class="form-control" name="dentist">
                                 <optgroupS>
                                     <option value="12" selected="">Selecione o dentista</option>
-                                    <?php echo getDentists(); ?>
+                                    <?php echo getDentistas(); ?>
                                 </optgroup>
                             </select></div>
                             <div class="form-row">
@@ -89,7 +89,7 @@
                             <div class="form-group"><label>Dentista</label><select class="form-control" name="dentist">
                                     <optgroup>
                                         <option value="12" selected="">Selecione o dentista</option>
-                                        <?php echo getDentists(); ?>
+                                        <?php echo getDentistas(); ?>
                                     </optgroup>
                                 </select></div>
                             <div class="form-row">
@@ -485,7 +485,7 @@
     <script src="../assets/js/smoothproducts.min.js"></script>
     <script src="../assets/js/theme.js"></script>
     <script src="https://kit.fontawesome.com/1404112e2c.js" crossorigin="anonymous"></script>
-    <script src="../assets/js/view_schedules.js"></script>
+    <script src="../assets/js/visualizarAtendimentos.js"></script>
 </body>
 
 </html>

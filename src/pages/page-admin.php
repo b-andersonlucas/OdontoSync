@@ -86,7 +86,7 @@
                             <div class="form-group"><label>Procedimento</label><input class="form-control" type="text" name="procedure"></div>
                             <div class="form-group"><label>Data</label><input class="form-control" type="date" name="day"></div>
                             <div class="form-group"><label>Hora</label><input class="form-control" type="time" name="hour"></div>
-                            <div class="form-group"><label>Dentista</label><select class="form-control" name="dentist">
+                            <div class="form-group"><label>Dentista</label><select class="form-control" name="dentista">
                                     <optgroup>
                                         <option value="12" selected="">Selecione o dentista</option>
                                         <?php echo getDentistas(); ?>
@@ -110,10 +110,10 @@
                         <div class="form-row" style="width: 100%;min-width: 250px;padding-top: 10px;">
                             <div class="col" id="col-left-form" style="width: 45%;padding: 0px 5px;min-width: 250px;max-width: 100%;">
                                 <h1 class="title-col-form">Dados pessoais</h1>
-                                <div class="form-group"><label>Nome</label><input class="form-control" type="text" required=""></div>
-                                <div class="form-group"><label>Data de nascimento</label><input class="form-control" type="date" required=""></div>
-                                <div class="form-group"><label>Telefone</label><input class="form-control" type="tel" required=""></div>
-                                <div class="form-group"><label>Cidade</label><select class="form-control" required="">
+                                <div class="form-group"><label>Nome</label><input class="form-control" type="text" required name="nome"></div>
+                                <div class="form-group"><label>Data de nascimento</label><input class="form-control" type="date" required name="dataNas"></div>
+                                <div class="form-group"><label>Telefone</label><input class="form-control" type="tel" required name="numeroTelefone"></div>
+                                <div class="form-group"><label>Cidade</label><select class="form-control" required name="cidade">
                                             <optgroup label="">
                                                 <option value="12" selected="">Selecione a cidade</option>
                                                 
@@ -457,11 +457,11 @@
                             </div>
                             <div class="col" id="col-right-form" style="width: 45%;min-width: 250px;max-width: 100%;">
                                 <h1 class="title-col-form">Dados de acesso</h1>
-                                <div class="form-group"><label>Usuário</label><input class="form-control" type="text" required=""></div>
-                                <div class="form-group"><label>Email</label><input class="form-control" type="email" required=""></div>
-                                <div class="form-group"><label>Senha</label><input class="form-control" type="password" required=""></div>
-                                <div class="form-group"><label>Confirmar senha</label><input class="form-control" type="password" required="">
-                                </div><button class="btn btn-primary btn-main btn-block" type="button">Cadastrar</button>
+                                <div class="form-group"><label>Usuário</label><input class="form-control" type="text" required name="cadUser"></div>
+                                <div class="form-group"><label>Email</label><input class="form-control" type="email" required name="emailA"></div>
+                                <div class="form-group"><label>Senha</label><input class="form-control" type="password" required name="senha1"></div>
+                                <div class="form-group"><label>Confirmar senha</label><input class="form-control" type="password" required name="senha2">
+                                </div><button class="btn btn-primary btn-main btn-block" type="submit" name="cadsPe" >Cadastrar</button>
                             </div>
                         </div>
                     </form>

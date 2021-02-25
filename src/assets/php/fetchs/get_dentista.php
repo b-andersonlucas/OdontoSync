@@ -11,7 +11,7 @@
 
 
         while($linha = mysqli_fetch_array($resultadoSelect)) {
-            $saida .= '<option value="'.$linha["nome"].'">'.$linha["nome"].'</option>';
+            $saida .= '<option value="'.$linha["email"].'">'.$linha["nome"].'</option>';
         }
 
         if($saida == '') {

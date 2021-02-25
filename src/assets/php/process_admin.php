@@ -12,8 +12,8 @@ if (isset($_POST['cadsHour'])) {
 
     include('connection.php');
 
-    $nomeD = isset($_POST["dentist"]) ? $_POST["dentist"] : "";
-    $email1 = "a@a.o";
+    $nomeD; //= isset($_POST["dentist"]) ? $_POST["dentist"] : "";
+    $email1 = isset($_POST["dentist"]) ? $_POST["dentist"] : "";
     $dataInicial = isset($_POST["serviceDay"]) ? $_POST["serviceDay"] : "";
     $inicoEX = isset($_POST["starHour"]) ? $_POST["starHour"] : "";
     $fimEX = isset($_POST["endHour"]) ? $_POST["endHour"] : "";
@@ -21,13 +21,23 @@ if (isset($_POST['cadsHour'])) {
 
     $dataFinal = str_replace("-", "/", $dataInicial);
 
-    echo "$nomeD</br>";
+    $sele= true;
+    if($sele==true){
+        $busca = "select nome from pessoa where email ='$email1'";
+        $resultadob=mysqli_query($con,$busca);
+        $arr = mysqli_fetch_array($resultadob);
+        $nomeD = $arr['nome'];
+        //echo $email1." email </br>";
+        //echo $nomeD." nome</br>";
+        $sql = "insert into Agenda_dentista values('$email1','$nomeD','$dataFinal',$numeroPacientes,'$inicoEX','$fimEX');";
+   // echo $sql." query</br>";
+        mysqli_query($con, $sql) or die(" falha ao inserir ");
+        header("location:/odontosync/src/pages/page-admin.php");
+    }
 
-    $sql = "insert into Agenda_dentista values('$nomeD','$dataFinal',$numeroPacientes,'$inicoEX','$fimEX');";
+    
 
-    mysqli_query($con, $sql) or die(" falha ao inserir ");
-
-    header("location:/odontosync/src/pages/page-admin.php");
+    //
     //String Dcont = dataN.substring(0,2);
     //String Mcont = dataN.substring(3,5);
     //String Acont = dataN.substring(6);
@@ -70,29 +80,114 @@ if (isset($_POST['medRecord'])) {
     $procedure = isset($_POST["procedure"]) ? $_POST["procedure"] : "";
     $dataInicial2 = isset($_POST["day"]) ? $_POST["day"] : "";
     $hora = isset($_POST["hour"]) ? $_POST["hour"] : "";
-    $dentist = "ze"; //isset($_POST["dentist"]) ? $_POST["dentist"] : "";
+    $dentista;
+    $dentistaEmail= isset($_POST["dentista"]) ? $_POST["dentista"] : "";
 
     $dataFinal2 = str_replace("-", "/", $dataInicial2);
 
-    $sql2 = "insert into Historico values('$emailClient','$nome','$dentist','$dataFinal2','$hora','$procedure');";
+    $sele= true;
+    if($sele==true){
+        $busca = "select nome from pessoa where email ='$dentistaEmail'";
+        $resultadob=mysqli_query($con,$busca);
+        $arr = mysqli_fetch_array($resultadob);
+        $dentista = $arr['nome'];
 
-    mysqli_query($con, $sql2) or die(" falha ao inserir ");
-    header("location:/odontosync/src/pages/page-admin.php");
+        $sql2 = "insert into Historico values('$emailClient','$nome','$dentistaEmail','$dentista','$dataFinal2','$hora','$procedure');";
+            //echo $sql2." query</br>";
+
+        mysqli_query($con, $sql2) or die(" falha ao inserir ");
+        header("location:/odontosync/src/pages/page-admin.php");
+    }
+
+    
+    //
 
     /*
-    echo "$nome <br>";
-    echo "$emailClient <br>";
-    echo "$procedure <br>";
-    echo "$dataInicial2 <br>";
-    echo "$dataFinal2 <br>";
-    echo "$hora <br>";
-    echo "$dentist <br>";
-    echo "$sql2 <br>";
+    echo $dentista ."</br>";
+    echo $nome ."</br>";
+    echo $emailClient ."</br>";
+    echo $procedure ."</br>";
+    echo $dataInicial2 ."</br>";
+    echo $dataFinal2 ."</br>";
+    echo $hora ."</br>";
+    echo $dentista. "</br>";
+    echo $sql2. "</br>";
     */
     //insert into Historico values('d@i.o','dickson','ze','21/01/15','17:30','arranquei o dente pela raiz');
     //insert into Historico values('d@i.o','a@a.o','21/01/15','17:30','arranquei o dente pela raiz');
-    
+
 }
-if(){
+if (isset($_POST['cadsPe'])) {
     
+    include('connection.php');
+
+    $nome = isset($_POST["nome"]) ? $_POST["nome"] : "";
+    $dataNasInicial = isset($_POST["dataNas"]) ? $_POST["dataNas"] : "";
+    $telefone = isset($_POST["numeroTelefone"]) ? $_POST["numeroTelefone"] : "";
+    $cidade = isset($_POST["cidade"]) ? $_POST["cidade"] : "";
+
+    $user = isset($_POST["cadUser"]) ? $_POST["cadUser"] : "";
+    $emailAc = isset($_POST["emailA"]) ? $_POST["emailA"] : "";
+    $senha1 = isset($_POST["senha1"]) ? $_POST["senha1"] : "";
+    $senha2 = isset($_POST["senha2"]) ? $_POST["senha2"] : "";
+    $privilegio = "c";//isset($_POST[""]) ? $_POST[""] : "";
+
+    $dataNasFinal = str_replace("-", "/", $dataNasInicial);
+
+    $senhaFinal = null;
+
+    
+    if($senha1===$senha2){
+        $senhaFinal = $senha1;
+
+        $busca = "select usuario from pessoa where usuario ='$user'";
+        
+        $resultado=mysqli_query($con,$busca);
+
+        $arr = mysqli_fetch_array($resultado);
+        $recArr = isset($arr['usuario']);
+
+        if($recArr == $user){
+            //echo $recArr." esse é resultado</br>";
+            echo "erro: usuario já está sendo utilizado, por favor escolha um novo </br>";
+            //echo $user." usuario <br>";
+        }elseif($user != $recArr){
+
+            //echo $recArr." resultado</br>";
+            echo "usuario valido para ser usado. o seu cadastro será efetuado</br>";
+            //echo $user." usuario <br>";
+
+            $sql3p1 = "insert into Pessoa values('$emailAc', '$user', '$senhaFinal', '$privilegio', '$nome', '$telefone');";
+            $sql3p2 = "insert into Cliente values ('$emailAc', '$cidade', '$dataNasFinal');";
+
+            //echo $sql3p1."</br>";
+            //echo $sql3p2."</br>";
+
+            mysqli_query($con, $sql3p1) or die(" falha ao inserir ");
+            mysqli_query($con, $sql3p2) or die(" falha ao inserir ");
+
+            //header("location:/odontosync/src/pages/page-admin.php");
+        }
+    }else{
+        echo "as senhas estão diferentes</br>";
+    }
+
+    /*
+    echo $nome." <br>";
+    echo $dataNasInicial." <br>";
+    echo $dataNasFinal." <br>";
+    echo $telefone." <br>";
+    echo $cidade." <br>";
+    echo $user." <br>";
+    echo $emailAc." <br>";
+    echo $senha1." <br>";
+    echo $senha2." <br>";
+    echo $senhaFinal." <br>";
+    */
+
+    
+
+   //
+   //insert into Pessoa values('d@i.o', 'dickson', '123', 'c', 'dickson teixeira', '(84) 99999-9999');
+   //insert into Cliente values ('d@i.o', 'serrinha', '2002/02/22');
 }

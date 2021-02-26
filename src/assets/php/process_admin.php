@@ -160,13 +160,13 @@ if (isset($_POST['cadsPe'])) {
             $sql3p1 = "insert into Pessoa values('$emailAc', '$user', '$senhaFinal', '$privilegio', '$nome', '$telefone');";
             $sql3p2 = "insert into Cliente values ('$emailAc', '$cidade', '$dataNasFinal');";
 
-            //echo $sql3p1."</br>";
-            //echo $sql3p2."</br>";
+            echo $sql3p1."</br>";
+            echo $sql3p2."</br>";
 
             mysqli_query($con, $sql3p1) or die(" falha ao inserir ");
             mysqli_query($con, $sql3p2) or die(" falha ao inserir ");
 
-            //header("location:/odontosync/src/pages/page-admin.php");
+            header("location:/odontosync/src/pages/page-admin.php");
         }
     }else{
         echo "as senhas estão diferentes</br>";

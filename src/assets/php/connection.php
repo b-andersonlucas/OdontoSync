@@ -10,3 +10,5 @@ or die ("Não conseguiu selecionar");//tratamento de erro na selecao
 // versao simplificado
 // $con = mysqli_connect("127.0.0.1", "root", "", "OdontoSync");
 // $bd = mysqli_select_db($con, "OdontoSync");
+
+mysqli_set_charset($con,"utf8");

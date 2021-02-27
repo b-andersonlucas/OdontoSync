@@ -1,4 +1,5 @@
-const tel_admin = +5584994048682
+const tel_admin = +5584  //Inserir numero do admin
+const clinica = "OdontoSync"
 
 function enviar_msg_contato() {
     var id_nome = document.getElementById('nome_autor').value

@@ -1,4 +1,5 @@
 <?php
+if(isset($_POST["diaInput"])){
     include('../connection.php');
 
     $horarios = '';
@@ -30,11 +31,8 @@
     }
 
     echo $horarios; 
+}
 
 
-    
-
-
-
-    
+     
 ?>

@@ -50,22 +50,28 @@ if (!isset($_SESSION["autenticado"])) {
             </div>
             <div class="modal-body">
                 <form action="#" class="form-default p-3" id="form-schedule">
-                    <div class="form-group mt-2">
+                    <div class="form-group mt-2 mb-2">
                         <label for="inputDate">Data</label>
                         <select class="form-control" name="date" id="inputDia"> 
                             <option value="" selected>Selecione</option>
                             <?php echo diasAtendimento(); ?>
                         </select>
                     </div>
-                    <div class="form-group mt-3 mb-5">
+                    <div class="form-group mt-3 mb-2">
                         <label for="inputHora">Horário</label>
-                        <select name="hour" id="inputHora" class="form-control">
+                        <select name="hora" id="inputHora" class="form-control">
+                            <option value="#" selected>Selecione</option>
+                        </select>
+                    </div>
+                    <div class="form-group mt-3 mb-5">
+                        <label for="inputDentista">Dentista</label>
+                        <select name="dentista" id="inputDentista" class="form-control">
                             <option value="#" selected>Selecione</option>
                         </select>
                     </div>
                 </form>
             </div>
-            <div class="modal-footer"><button class="btn btn-light" data-dismiss="modal" type="button">Close</button><button class="btn btn-primary btn-main" type="button" form="form-schedule">Agendar</button></div>
+            <div class="modal-footer"><button class="btn btn-light" data-dismiss="modal" type="button">Close</button><button class="btn btn-primary btn-main" type="button" form="form-schedule" name="agendar">Agendar</button></div>
         </div>
     </div>
 </div></div>

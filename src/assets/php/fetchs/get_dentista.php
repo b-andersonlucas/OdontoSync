@@ -20,4 +20,29 @@
             return $saida;    
         }
     }
+
+    if(isset($_POST["diaInput"])) {
+        include('../connection.php');
+
+        $dentista = '';
+
+        $diaSelecionado = $_POST["diaInput"];
+
+        $slq_select = "SELECT nome_dentista FROM agenda_dentista WHERE dia = '".$diaSelecionado."'";
+
+        $resultado = mysqli_query($con, $slq_select);
+        
+        mysqli_close($con);
+
+        while($linha = mysqli_fetch_array($resultado)) {
+            $dentista .= '<option value="'.$linha["nome_dentista"].'">'.$linha["nome_dentista"].'</option>';
+        }
+
+        if($dentista == '') {
+            echo "Erro ao carregar dentistas!";
+        } else {
+            echo $dentista;
+        }
+
+    }
 ?>

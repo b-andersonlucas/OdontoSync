@@ -35,5 +35,15 @@ $(document).ready(function(){
                 $('#inputHora').html(hora);
             }
         });
+
+        $.ajax({
+            url:"../assets/php/fetchs/get_dentista.php",
+            method:"POST",
+            data:{diaInput:diaSelecionado},
+            dataType:"text",
+            success:function(hora) {
+                $('#inputDentista').html(hora);
+            }
+        });
     });
 });

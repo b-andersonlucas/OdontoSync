@@ -5,7 +5,7 @@
     
     $email_Cliente = $_POST['emailCliente'];
 
-    $sql_select_cliente = "SELECT * FROM pessoa, cliente WHERE email = '".$email_Cliente."'";
+    $sql_select_cliente = "SELECT * FROM pessoa, cliente WHERE pessoa.email = '".$email_Cliente."' AND cliente.pessoa_email = '".$email_Cliente."'";
     $resultado_select = mysqli_query($con, $sql_select_cliente);
 
     $linha = mysqli_fetch_array($resultado_select);
@@ -27,6 +27,7 @@
                     <td>E-mail</td>
                     <td id="emailPessoa">'.$linha["email"].'</td>
                 </tr>
+                
                 <tr>
                     <td>Data de nascimento</td>
                     <td>'.$dataNasc.'</td>

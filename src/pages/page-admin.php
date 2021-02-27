@@ -25,7 +25,7 @@
                     <li class="nav-item text-white"><a class="nav-link text-white" href="#service-calendar">Atendimento</a></li>
                     <li class="nav-item text-white"><a class="nav-link text-white" href="#procedure">Procedimento</a></li>
                     <li class="nav-item text-white"><a class="nav-link text-white" href="#register-user">Cadastro</a></li>
-                    <li class="nav-item"><button class="btn btn-primary btn-acess bg-white" type="submit" style="border-style: none;">Sair</button></li>
+                    <li class="nav-item"><a class="btn btn-primary btn-acess bg-white" style="../assets/php/logout.php" href="">Sair</a></li> 
                 </ul>
             </div>
         </div>

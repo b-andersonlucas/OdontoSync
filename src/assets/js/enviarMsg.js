@@ -1,9 +1,9 @@
-const tel_admin = +5584
-const clinica = "OdontoSync"
+const tel_admin = +5584994048682
+
 function enviar_msg_contato() {
-    var id_nome = document.getElementById('name_author').value
-    var id_assunto = document.getElementById('subject').value
-    var id_msg = document.getElementById('message').value
+    var id_nome = document.getElementById('nome_autor').value
+    var id_assunto = document.getElementById('assunto').value
+    var id_msg = document.getElementById('mensagem').value
     var id_link = document.getElementById('btn_link').setAttribute("href",`https://wa.me/${tel_admin}?text=Nome: ${id_nome}%0aAssunto: ${id_assunto}%0aMenssagem: ${id_msg}`)
 }
 

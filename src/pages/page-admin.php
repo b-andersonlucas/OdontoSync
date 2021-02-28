@@ -1,11 +1,14 @@
-<?php include '../assets/php/fetchs/get_dentista.php'; ?>
+<?php 
+$p = "d";
+include('../assets/php/fetchs/authenticate-priv.php');
+include '../assets/php/fetchs/get_dentista.php'; ?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Pagina Administrador | OdontoSync</title>
+    <tAdministitle>Página Administrador | OdontoSync</title>
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
     <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
@@ -25,7 +28,7 @@
                     <li class="nav-item text-white"><a class="nav-link text-white" href="#service-calendar">Atendimento</a></li>
                     <li class="nav-item text-white"><a class="nav-link text-white" href="#procedure">Procedimento</a></li>
                     <li class="nav-item text-white"><a class="nav-link text-white" href="#register-user">Cadastro</a></li>
-                    <li class="nav-item"><a class="btn btn-primary btn-acess bg-white" style="../assets/php/logout.php" href="">Sair</a></li> 
+                    <li class="nav-item"><a class="btn btn-primary btn-acess bg-white" href="../assets/php/logout.php">Sair</a></li> 
                 </ul>
             </div>
         </div>
@@ -34,7 +37,7 @@
         <section id="service-calendar" class="clean-block payment-form dark" style="padding-bottom: 50px;">
             <div class="container">
                 <div class="block-heading" style="margin-bottom: 40px;">
-                    <h2 class="d-flex justify-content-between title-client" style="padding-right: 12px; ">Olá, Administrador<a href="./page-search.html" style="font-size: 18px;">Pesquisar cliente&nbsp;<i class="fa fa-long-arrow-right"></i></a></h2>
+                    <h2 class="d-flex justify-content-between title-client" style="padding-right: 12px; ">Olá, Administrador <?php echo $_SESSION["primeiroNome"]?><a href="./page-search.html" style="font-size: 18px;">Pesquisar cliente&nbsp;<i class="fa fa-long-arrow-right"></i></a></h2>
                 </div>
                 <div class="text-left" style="background: #ffffff;border-style: none;border-radius: 10px;padding-top: 10px;padding-right: 10px;padding-bottom: 32px;padding-left: 15px;margin-bottom: 60px;">
                     <h3 class="title-table" style="margin-bottom: 22px;">Agendamentos</h3>

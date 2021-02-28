@@ -1,3 +1,11 @@
+<?php 
+session_start();
+if (isset($_SESSION["autenticado"])) {
+    header("location:/odontosync/src/assets/php/process-login.php");
+} else {
+    session_destroy();
+}
+?>
 <!DOCTYPE html>
 <html style="background: #f6f6f6;">
 
@@ -23,7 +31,7 @@
                     <li class="nav-item text-white"><a class="nav-link text-white" href="about-us.html">sobre</a></li>
                     <li class="nav-item text-white"><a class="nav-link text-white" href="services.html">tratamentos</a></li>
                     <li class="nav-item text-white"><a class="nav-link text-white" href="contact-us.html">contato</a></li>
-                    <li class="nav-item"><a class="nav-link active btn bg-white btn-acess" href="login.html">acessar</a></li>
+                    <li class="nav-item"><a class="nav-link active btn bg-white btn-acess" href="login.php">acessar</a></li>
                 </ul>
             </div>
         </div>
@@ -34,8 +42,8 @@
                 <div class="block-heading">
                     <h2 class="title-form">Login</h2>
                 </div>
-                <form class="form-default" method="POST" action="../assets/php/process-client.php" >
-                    <div class="form-group"><label for="user">Usuário</label><input class="form-control item" type="text" id="user" name="user" autofocus required></div>
+                <form class="form-default" method="POST" action="../assets/php/process-login.php" >
+                    <div class="form-group"><label for="user">Usuário</label><input class="form-control item" type="text" id="usuario" name="usuario" autofocus required></div>
                     <div class="form-group"><label for="password">Senha</label><input class="form-control" type="password" id="password" name="password" required></div>
                     <div class="form-group"><a href="contact-us.html">Esqueceu a senha?</a></div><input class="btn btn-primary btn-block btn-main" type="submit" name="ok">
                     <footer class="text-right" id="footerLogin"><a href="registration.php">Cadastre-se aqui</a></footer>

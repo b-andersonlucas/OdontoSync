@@ -1,10 +1,7 @@
 <?php 
-session_start();
+$p = "c";
+include('../assets/php/fetchs/authenticate-priv.php');
 include('../assets/php/fetchs/get_dataHorario.php');
-if (!isset($_SESSION["autenticado"])) {
-    session_destroy();
-    header("location:/odontosync/src/index.html");
-}
 ?>
 <!DOCTYPE html>
 <html style="background: #f6f6f6;">

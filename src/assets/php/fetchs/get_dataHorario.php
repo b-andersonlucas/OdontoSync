@@ -3,7 +3,7 @@
         include('../assets/php/connection.php');
 
         $diaAtual = date("Y/m/d");
-        $sql_select = "SELECT * FROM agenda_dentista WHERE dia >= '".$diaAtual."' ";
+        $sql_select = "SELECT DISTINCT dia FROM agenda_dentista WHERE dia >= '".$diaAtual."'";
         $resultadoSelect = mysqli_query($con, $sql_select);
 
         mysqli_close($con);

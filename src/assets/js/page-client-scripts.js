@@ -25,17 +25,6 @@ $(document).ready(function() {
 $(document).ready(function(){
     $('#inputDia').change(function(){
         var diaSelecionado = $(this).val();
-
-        $.ajax({
-            url:"../assets/php/fetchs/get_horario.php",
-            method:"POST",
-            data:{diaInput:diaSelecionado},
-            dataType:"text",
-            success:function(hora) {
-                $('#inputHora').html(hora);
-            }
-        });
-
         $.ajax({
             url:"../assets/php/fetchs/get_dentista.php",
             method:"POST",
@@ -46,4 +35,18 @@ $(document).ready(function(){
             }
         });
     });
+
+    $('#inputDentista').change(function() {
+        var dentistaSelecionado = $(this).val();
+
+        $.ajax({
+            url:"../assets/php/fetchs/get_horario.php",
+            method:"POST",
+            data:{dentista:dentistaSelecionado},
+            dataType:"text",
+            success:function(hora) {
+                $('#inputHora').html(hora);
+            }
+        });
+    })
 });

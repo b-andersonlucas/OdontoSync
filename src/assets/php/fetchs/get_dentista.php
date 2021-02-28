@@ -24,18 +24,18 @@
     if(isset($_POST["diaInput"])) {
         include('../connection.php');
 
-        $dentista = '';
+        $dentista = '<option value="#" selected>Selecione</option>';
 
         $diaSelecionado = $_POST["diaInput"];
 
-        $slq_select = "SELECT nome_dentista FROM agenda_dentista WHERE dia = '".$diaSelecionado."'";
+        $slq_select = "SELECT nome_dentista, dentista_email FROM agenda_dentista WHERE dia = '".$diaSelecionado."'";
 
         $resultado = mysqli_query($con, $slq_select);
         
         mysqli_close($con);
 
         while($linha = mysqli_fetch_array($resultado)) {
-            $dentista .= '<option value="'.$linha["nome_dentista"].'">'.$linha["nome_dentista"].'</option>';
+            $dentista .= '<option value="'.$linha["dentista_email"].'">'.$linha["nome_dentista"].'</option>';
         }
 
         if($dentista == '') {

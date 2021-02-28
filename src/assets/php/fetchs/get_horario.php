@@ -1,14 +1,15 @@
 <?php
-if(isset($_POST["diaInput"])){
+if(isset($_POST["dentista"])){
     include('../connection.php');
 
     $horarios = '';
 
-    $diaSelecionado = $_POST["diaInput"];
+    $dentistaEmail = $_POST["dentista"];
 
-    $slq_select = "SELECT * FROM agenda_dentista WHERE dia = '".$diaSelecionado."'";
+    $sql_select = "SELECT * FROM agenda_dentista WHERE dentista_email = '".$dentistaEmail."'";
+   
 
-    $resultado = mysqli_query($con, $slq_select);
+    $resultado = mysqli_query($con, $sql_select);
     
     mysqli_close($con);
 
@@ -20,14 +21,15 @@ if(isset($_POST["diaInput"])){
     $numClientes = $linha["n_clientes"];
 
     $intervalo = ($fim_ex - $inicio_ex)/$numClientes;
-
+    
+    
     $cont = 1;
     while($cont < $numClientes+1) {
         $horarioReservado = gmdate("H:i", ($inicio_ex + $intervalo*$cont));
-
-        $horarios .= '<option value="'.$horarioReservado.'">'.$horarioReservado.'</option>';
-
-        $cont++;
+       
+            $horarios .= '<option value="'.$horarioReservado.'">'.$horarioReservado.'</option>';
+            $cont++;
+        
     }
 
     echo $horarios; 

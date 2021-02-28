@@ -49,29 +49,33 @@ if (!isset($_SESSION["autenticado"])) {
                 <h4 class="title-table">Agendar Horário</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
             </div>
             <div class="modal-body">
-                <form action="#" class="form-default p-3" id="form-schedule">
+                <form action="../assets/php/cadastrarHorario.php" method="POST" class="form-default p-3" id="form-schedule">
+                    <div class="form-group  mt-3 mb-2">
+                        <label for="user">Seu email</label>
+                        <input class="form-control item" type="text" id="emailCliente" name="email" value="<?php echo $_SESSION["email"] ?>" readonly required>
+                    </div>
                     <div class="form-group mt-2 mb-2">
                         <label for="inputDate">Data</label>
-                        <select class="form-control" name="date" id="inputDia"> 
+                        <select class="form-control" name="dia" id="inputDia" required> 
                             <option value="" selected>Selecione</option>
                             <?php echo diasAtendimento(); ?>
                         </select>
                     </div>
                     <div class="form-group mt-3 mb-2">
-                        <label for="inputHora">Horário</label>
-                        <select name="hora" id="inputHora" class="form-control">
-                            <option value="#" selected>Selecione</option>
+                        <label for="inputDentista">Dentista</label>
+                        <select name="dentista" id="inputDentista" class="form-control" required>
+                            <option value="#" selected>Dentista</option>
                         </select>
                     </div>
-                    <div class="form-group mt-3 mb-5">
-                        <label for="inputDentista">Dentista</label>
-                        <select name="dentista" id="inputDentista" class="form-control">
+                    <div class="form-group mt-3 mb-2">
+                        <label for="inputHora">Horário</label>
+                        <select name="hora" id="inputHora" class="form-control" required>
                             <option value="#" selected>Selecione</option>
                         </select>
                     </div>
                 </form>
             </div>
-            <div class="modal-footer"><button class="btn btn-light" data-dismiss="modal" type="button">Close</button><button class="btn btn-primary btn-main" type="button" form="form-schedule" name="agendar">Agendar</button></div>
+            <div class="modal-footer"><button class="btn btn-light" data-dismiss="modal" type="button">Close</button><button class="btn btn-primary btn-main" type="submit" form="form-schedule" name="agendar">Agendar</button></div>
         </div>
     </div>
 </div></div>

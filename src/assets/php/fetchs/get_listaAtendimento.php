@@ -3,7 +3,7 @@
     $saida_lista = '';
     
     $dia_PK = $_POST['dia_str'];
-    $sql_select_horarios = "SELECT pessoa.nome, dia, priv_pessoa FROM `horarios` INNER JOIN pessoa ON dia = '".$dia_PK."' AND priv_pessoa = 'c'";
+    $sql_select_horarios = "SELECT pessoa.nome, dia, priv_pessoa FROM `horarios` INNER JOIN pessoa WHERE dia = '".$dia_PK."' AND priv_pessoa = 'c' AND pessoa.email = horarios.Cliente_email";
 
     $resultado_sql = mysqli_query($con, $sql_select_horarios);
 

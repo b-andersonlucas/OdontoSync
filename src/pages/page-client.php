@@ -72,7 +72,10 @@ include('../assets/php/fetchs/get_dataHorario.php');
                     </div>
                 </form>
             </div>
-            <div class="modal-footer"><button class="btn btn-light" data-dismiss="modal" type="button">Close</button><button class="btn btn-primary btn-main" type="submit" form="form-schedule" name="agendar">Agendar</button></div>
+            <div class="modal-footer">
+                <button class="btn btn-light" data-dismiss="modal" type="button">Close</button>
+                <button class="btn btn-primary btn-main" type="submit" form="form-schedule" name="agendar">Agendar</button>
+            </div>
         </div>
     </div>
 </div></div>

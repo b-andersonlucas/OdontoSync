@@ -26,20 +26,20 @@ if (!(isset($_SESSION["autenticado"]))) {
             $_SESSION["primeiroNome"] =  $d[0];
         
             if ($_SESSION["autenticado"] === "c") { //caso cliente
-                $sql = "SELECT cidade, data_nascimento FROM pessoa, cliente WHERE email = '$email'";
+                $sql = "SELECT cidade, data_nascimento FROM pessoa, cliente WHERE email = '$email' and cliente.pessoa_email = pessoa.email";
                 $resultado = mysqli_query($con, $sql);
                 $linha = mysqli_fetch_array($resultado, MYSQLI_BOTH);
                 $_SESSION["cidade"] = $linha["cidade"];
                 $_SESSION["data_nascimento"] = $linha["data_nascimento"];
     
             } elseif ($_SESSION["autenticado"] === "d") { //caso dentista
-                $sql= "SELECT codigo_registro FROM pessoa, dentista WHERE email = '$email'";
+                $sql= "SELECT codigo_registro FROM pessoa, dentista WHERE email = '$email' and dentista.pessoa_email = pessoa.email";
                 $resultado= mysqli_query($con, $sql);
                 $linha= mysqli_fetch_array($resultado, MYSQLI_BOTH);
                 $_SESSION["codigo_registro"] = $linha["codigo_registro"];
     
             } elseif ($_SESSION["autenticado"] === "s") { //caso secretária
-                $sql = "SELECT data_vinculo FROM pessoa, secretaria WHERE email = '$email'";
+                $sql = "SELECT data_vinculo FROM pessoa, secretaria WHERE email = '$email' and secretaria.pessoa_email = pessoa.email";
                 $resultado = mysqli_query($con, $sql);
                 $linha = mysqli_fetch_array($resultado, MYSQLI_BOTH);
                 $_SESSION["data_vinculo"] = $linha["data_vinculo"];

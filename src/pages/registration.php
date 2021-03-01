@@ -41,7 +41,7 @@
                         <div class="col" id="col-left-form" style="width: 45%;padding: 0px 5px;min-width: 250px;max-width: 100%;">
                             <h1 class="title-col-form">Dados pessoais</h1>
                             <div class="form-group"><label>Nome</label><input class="form-control" type="text" name="nome"></div>
-                            <div class="form-group"><label>Data de nascimento</label><input class="form-control" type="date" name="data"></div>
+                            <div class="form-group"><label>Data de nascimento</label><input class="form-control" type="date" name="data_nascimento"></div>
                             <div class="form-group"><label>Telefone</label><input class="form-control" type="tel" name="telefone"></div>
                             <div class="form-group"><label>Cidade</label><select class="form-control" name="cidade">
                                     <?php include('../assets/subpages/optgroup-city.php');?>

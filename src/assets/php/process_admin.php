@@ -32,7 +32,13 @@ if (isset($_POST['cadsHour'])) {
         $sql = "insert into Agenda_dentista values('$email1','$nomeD','$dataFinal',$numeroPacientes,'$inicoEX','$fimEX');";
    // echo $sql." query</br>";
         mysqli_query($con, $sql) or die(" falha ao inserir ");
-        header("location:/odontosync/src/pages/page-admin.php");
+
+        echo "<script language='javascript' type='text/javascript'>
+                        alert('Dados inseridos na agenda com sucesso!');window.location.
+                        href='http://localhost/odontosync/src/pages/page-admin.php'
+                </script>";
+
+        //header("location:/odontosync/src/pages/page-admin.php");
     }
 
     
@@ -96,7 +102,13 @@ if (isset($_POST['medRecord'])) {
             //echo $sql2." query</br>";
 
         mysqli_query($con, $sql2) or die(" falha ao inserir ");
-        header("location:/odontosync/src/pages/page-admin.php");
+
+        echo "<script language='javascript' type='text/javascript'>
+                        alert('Consulta cadastrada com sucesso');window.location.
+                        href='http://localhost/odontosync/src/pages/page-admin.php'
+                </script>";
+
+        //header("location:/odontosync/src/pages/page-admin.php");
     }
 
     
@@ -149,27 +161,47 @@ if (isset($_POST['cadsPe'])) {
 
         if($recArr == $user){
             //echo $recArr." esse é resultado</br>";
-            echo "erro: usuario já está sendo utilizado, por favor escolha um novo </br>";
+            //echo "erro: nome de usuario já está sendo utilizado, por favor escolha um novo </br>";
+            echo "<script language='javascript' type='text/javascript'>
+                        alert('Esse nome de usuario $recArr já está sendo utilizado, por favor escolha um novo');window.location.
+                        href='http://localhost/odontosync/src/pages/page-admin.php'
+                </script>";
             //echo $user." usuario <br>";
         }elseif($user != $recArr){
 
             //echo $recArr." resultado</br>";
-            echo "usuario valido para ser usado. o seu cadastro será efetuado</br>";
+            //echo "usuario valido para ser usado. o seu cadastro será efetuado</br>";
+            echo "<script language='javascript' type='text/javascript'>
+                        alert('Informações válidas, o seu cadastro será efetuado');window.location.
+                        href='http://localhost/odontosync/src/pages/page-admin.php'
+                </script>";
             //echo $user." usuario <br>";
 
             $sql3p1 = "insert into Pessoa values('$emailAc', '$user', '$senhaFinal', '$privilegio', '$nome', '$telefone');";
             $sql3p2 = "insert into Cliente values ('$emailAc', '$cidade', '$dataNasFinal');";
 
-            echo $sql3p1."</br>";
-            echo $sql3p2."</br>";
+            //echo $sql3p1."</br>";
+            //echo $sql3p2."</br>";
 
             mysqli_query($con, $sql3p1) or die(" falha ao inserir ");
             mysqli_query($con, $sql3p2) or die(" falha ao inserir ");
 
-            header("location:/odontosync/src/pages/page-admin.php");
+           /*
+            echo "<script language='javascript' type='text/javascript'>
+            alert('cadastro efetuado com sucesso');window.location.
+            href='http://localhost/odontosync/src/pages/page-admin.php'
+            </script>";
+            */
+
+            //header("location:/odontosync/src/pages/page-admin.php");
         }
     }else{
-        echo "as senhas estão diferentes</br>";
+       // echo "as senhas estão diferentes</br>";
+        echo "<script language='javascript' type='text/javascript'>
+                        alert('as senhas informadas estão diferentes');window.location.
+                        href='http://localhost/odontosync/src/pages/page-admin.php'
+                </script>";
+        
     }
 
     /*

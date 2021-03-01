@@ -58,12 +58,12 @@ fim_ex time
 
 create table Horarios(
 Cliente_email VARCHAR (50) ,
-FOREIGN KEY  (Cliente_email) REFERENCES Cliente(pessoa_email) ON DELETE CASCADE
+FOREIGN KEY  (Cliente_email) REFERENCES Cliente(pessoa_email) ON DELETE CASCADE -- adicionar o nome do cliente e do dentista
  ON UPDATE CASCADE,
 dentista_email VARCHAR (50),
 FOREIGN KEY (dentista_email) REFERENCES Dentista(pessoa_email) ON DELETE CASCADE
  ON UPDATE CASCADE,
-dia date primary key,
+dia date,
 horario time
 );
 
@@ -101,7 +101,7 @@ insert into Horarios values('d@i.o','a@a.o','21/01/15','17:30');
 -- select * from ;
 
 -- delete from Agenda_dentista where dia='2021/02/05';
- delete from pessoa where email = 'j@a.o';
+-- delete from pessoa where email = 'j@a.o';
 -- delete from Agenda_dentista where nome_dentista = 'ze';
  
 -- drop database odontosync;

@@ -145,7 +145,7 @@ if (isset($_POST['cadsPe'])) {
         $resultado=mysqli_query($con,$busca);
 
         $arr = mysqli_fetch_array($resultado);
-        $recArr = isset($arr['usuario']);
+        $recArr = $arr['usuario'];
 
         if($recArr == $user){
             //echo $recArr." esse é resultado</br>";

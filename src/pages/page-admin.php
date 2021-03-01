@@ -28,7 +28,7 @@ include '../assets/php/fetchs/get_dentista.php'; ?>
                     <li class="nav-item text-white"><a class="nav-link text-white" href="#service-calendar">Atendimento</a></li>
                     <li class="nav-item text-white"><a class="nav-link text-white" href="#procedure">Procedimento</a></li>
                     <li class="nav-item text-white"><a class="nav-link text-white" href="#register-user">Cadastro</a></li>
-                    <li class="nav-item"><a class="btn btn-primary btn-acess bg-white" href="../assets/php/logout.php">Sair</a></li> 
+                    <li class="nav-item"><a class="nav-link btn bg-white btn-acess" href="../assets/php/logout.php">Sair</a></li> 
                 </ul>
             </div>
         </div>
@@ -37,7 +37,7 @@ include '../assets/php/fetchs/get_dentista.php'; ?>
         <section id="service-calendar" class="clean-block payment-form dark" style="padding-bottom: 50px;">
             <div class="container">
                 <div class="block-heading" style="margin-bottom: 40px;">
-                    <h2 class="d-flex justify-content-between title-client" style="padding-right: 12px; ">Olá, Administrador <?php echo $_SESSION["primeiroNome"]?><a href="./page-search.html" style="font-size: 18px;">Pesquisar cliente&nbsp;<i class="fa fa-long-arrow-right"></i></a></h2>
+                    <h2 class="d-flex justify-content-between title-client" style="padding-right: 12px; ">Olá, Administrador <?php echo $_SESSION["primeiroNome"]?><a href="./page-search.php" style="font-size: 18px;">Pesquisar cliente&nbsp;<i class="fa fa-long-arrow-right"></i></a></h2>
                 </div>
                 <div class="text-left" style="background: #ffffff;border-style: none;border-radius: 10px;padding-top: 10px;padding-right: 10px;padding-bottom: 32px;padding-left: 15px;margin-bottom: 60px;">
                     <h3 class="title-table" style="margin-bottom: 22px;">Agendamentos</h3>

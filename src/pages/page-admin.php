@@ -1,9 +1,7 @@
-<?php
-session_start();
-$ps = true; // $ps para secretária
-$pd = true; // $pd para dentista
+<?php 
+$p = "d";
 include('../assets/php/fetchs/authenticate-priv.php');
-include('../assets/php/fetchs/get_dentista.php'); ?>
+include '../assets/php/fetchs/get_dentista.php'; ?>
 <!DOCTYPE html>
 <html>
 

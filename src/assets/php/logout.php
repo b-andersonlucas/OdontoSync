@@ -1,5 +1,5 @@
 <?php
 session_start();
 session_destroy();
-header("location:/odontosync/src/index.html");
+header("location:/odontosync/src/pages/login.php");
 ?>

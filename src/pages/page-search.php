@@ -1,3 +1,9 @@
+<?php
+session_start(); 
+$ps = true;
+$pd = true; 
+include('../assets/php/fetchs/authenticate-priv.php');
+?>
 <!DOCTYPE html>
 <html style="background: #f6f6f6;">
 
@@ -27,7 +33,7 @@
                     <li class="nav-item text-white"><a class="nav-link text-white" href="#view-client">Visualizar dados</a></li>
                     <li class="nav-item text-white"><a class="nav-link text-white" href="#service-return">info. retorno</a></li>
                     <li class="nav-item text-white"><a class="nav-link text-white" href="#client-historic">HISTÓRICO</a></li>
-                    <li class="nav-item"><a class="nav-link btn bg-white btn-acess" href="#">Sair</a></li>
+                    <li class="nav-item"><a class="nav-link btn bg-white btn-acess" href="../assets/php/logout.php">Sair</a></li>
                 </ul>
             </div>
         </div>

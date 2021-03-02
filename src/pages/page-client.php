@@ -1,5 +1,6 @@
-<?php 
-$p = "c";
+<?php
+session_start(); 
+$p;
 include('../assets/php/fetchs/authenticate-priv.php');
 include('../assets/php/fetchs/get_dataHorario.php');
 ?>

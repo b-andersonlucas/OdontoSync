@@ -11,7 +11,12 @@
     mysqli_close($con);
     
     $linha = mysqli_fetch_array($resultadoSelect);
-    $diaProcedimento = date("d/m/Y", strtotime(isset($linha["dia"])));
+    if(isset($linha["dia"])) {
+        $diaProcedimento = date("d/m/Y", strtotime($linha["dia"]));
+    } else {
+        $diaProcedimento =  date("d/m/Y", strtotime("01/01/1970"));
+    }
+    
 
     if($diaProcedimento >= date("d/m/Y")){
             

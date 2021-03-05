@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var email_str = $('#email').text();
+    var email_str = $('#email').val();
         //Agendamento
         $.ajax({
             url:"../assets/php/fetchs/process_cliente_horaAgenda.php",

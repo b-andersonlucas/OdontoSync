@@ -24,7 +24,7 @@
 
 .title-col-form {
   font-size: 22px;
-  color: #006f6b;
+  color: #006f6b  !important;
   margin-bottom: 22px;
 }
 
@@ -40,4 +40,3 @@
 .btn-main:focus {
   background-color: #006f6b !important;
 }
-

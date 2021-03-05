@@ -19,8 +19,9 @@ include('../assets/php/fetchs/get_dentista.php'); ?>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <link rel="stylesheet" href="../assets/css/pages-client-styles.css">
     <link rel="stylesheet" href="../assets/css/Search-Input-Responsive-with-Icon.css">
+    <link rel="stylesheet" href="../assets/css/Footer-Basic.css">
     <link rel="stylesheet" href="../assets/css/smoothproducts.css">
-    <link rel="shortcut icon" href="/src/assets/img/favicon-96x96.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/img/favicon-96x96.png" type="image/x-icon">
 </head>
 
 <body style="background-color: #f6f6f6;"><nav class="navbar navbar-light navbar-expand-lg fixed-top text-white bg-white clean-navbar">
@@ -136,10 +137,16 @@ include('../assets/php/fetchs/get_dentista.php'); ?>
             </div>
         </section>
     </main>
-    <footer class="page-footer dark" style="padding: 0;">
-        <div class="footer-copyright">
-            <p>© 2021 OdontoSync</p>
-        </div>
+    <footer class="footer-basic">
+        <ul class="list-inline">
+            <li class="list-inline-item"></li>
+            <li class="list-inline-item"><a href="../index.html" style="font-size: 12px;">Inicio</a></li>
+            <li class="list-inline-item" style="font-size: 10px;"><a href="about-us.html" style="font-size: 12px;">Sobre</a></li>
+            <li class="list-inline-item" style="font-size: 10px;"><a href="contact-us.html" style="font-size: 12px;">Contato</a></li>
+            <li class="list-inline-item" style="font-size: 10px;"><a href="https://github.com/b-andersonlucas/OdontoSync" target="blank" style="font-size: 12px;">Github</a></li>
+            <li class="list-inline-item" style="font-size: 10px;"><a href="https://github.com/b-andersonlucas/OdontoSync/issues" target="blank" style="font-size: 12px;">Reportar Bug</a></li>
+        </ul>
+        <p class="copyright">OdontoSync© 2021</p>
     </footer>
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>

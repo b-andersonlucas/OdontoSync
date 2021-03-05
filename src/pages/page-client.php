@@ -1,6 +1,6 @@
 <?php
 session_start(); 
-$p;
+$p = true;
 include('../assets/php/fetchs/authenticate-priv.php');
 include('../assets/php/fetchs/get_dataHorario.php');
 ?>
@@ -17,8 +17,9 @@ include('../assets/php/fetchs/get_dataHorario.php');
     <link rel="stylesheet" href="../assets/css/forms-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <link rel="stylesheet" href="../assets/css/pages-client-styles.css">
+    <link rel="stylesheet" href="../assets/css/Footer-Basic.css">
     <link rel="stylesheet" href="../assets/css/smoothproducts.css">
-    <link rel="shortcut icon" href="/src/assets/img/favicon-96x96.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/img/favicon-96x96.png" type="image/x-icon">
 </head>
 
 <body style="background: #f6f6f6;">
@@ -28,7 +29,6 @@ include('../assets/php/fetchs/get_dataHorario.php');
                 <ul class="nav navbar-nav text-white ml-auto">
                     <li class="nav-item text-white"><a class="nav-link text-white" href="../index.html">início</a></li>
                     <li class="nav-item text-white"><a class="nav-link text-white" href="pages/about-us.html">sobre</a></li>
-                    <li class="nav-item text-white"><a class="nav-link text-white" href="pages/pricing.html">tratamentos</a></li>
                     <li class="nav-item text-white"><a class="nav-link text-white" href="contact-us.html">contato</a></li>
                     <li class="nav-item"><a class="nav-link btn bg-white btn-acess" href="../assets/php/logout.php">sair</a></li>
                 </ul>
@@ -113,7 +113,7 @@ include('../assets/php/fetchs/get_dataHorario.php');
                                 </tr>
                                 <tr>
                                     <td>Cidade/UF</td>
-                                    <td><?php echo $_SESSION["cidade"];?></td>
+                                    <td><?php echo $_SESSION["cidade"];?>/RN</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -172,10 +172,16 @@ include('../assets/php/fetchs/get_dataHorario.php');
             </div>
         </section>
     </main>
-    <footer class="page-footer dark" style="padding: 0;">
-        <div class="footer-copyright">
-            <p>© 2021 OdontoSync</p>
-        </div>
+    <footer class="footer-basic">
+        <ul class="list-inline">
+            <li class="list-inline-item"></li>
+            <li class="list-inline-item"><a href="../index.html" style="font-size: 12px;">Inicio</a></li>
+            <li class="list-inline-item" style="font-size: 10px;"><a href="about-us.html" style="font-size: 12px;">Sobre</a></li>
+            <li class="list-inline-item" style="font-size: 10px;"><a href="contact-us.html" style="font-size: 12px;">Contato</a></li>
+            <li class="list-inline-item" style="font-size: 10px;"><a href="https://github.com/b-andersonlucas/OdontoSync" target="blank" style="font-size: 12px;">Github</a></li>
+            <li class="list-inline-item" style="font-size: 10px;"><a href="https://github.com/b-andersonlucas/OdontoSync/issues" target="blank" style="font-size: 12px;">Reportar Bug</a></li>
+        </ul>
+        <p class="copyright">OdontoSync© 2021</p>
     </footer>
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>

@@ -182,7 +182,7 @@ include('../assets/php/fetchs/authenticate-priv.php');
     <footer class="footer-basic">
         <ul class="list-inline">
             <li class="list-inline-item"></li>
-            <li class="list-inline-item"><a href="../index.html" style="font-size: 12px;">Inicio</a></li>
+            <li class="list-inline-item"><a href="../" style="font-size: 12px;">Inicio</a></li>
             <li class="list-inline-item" style="font-size: 10px;"><a href="about-us.html" style="font-size: 12px;">Sobre</a></li>
             <li class="list-inline-item" style="font-size: 10px;"><a href="contact-us.html" style="font-size: 12px;">Contato</a></li>
             <li class="list-inline-item" style="font-size: 10px;"><a href="https://github.com/b-andersonlucas/OdontoSync" target="blank" style="font-size: 12px;">Github</a></li>

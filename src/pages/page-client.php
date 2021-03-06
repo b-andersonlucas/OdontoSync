@@ -24,10 +24,10 @@ include('../assets/php/fetchs/get_dataHorario.php');
 
 <body style="background: #f6f6f6;">
     <nav class="navbar navbar-light navbar-expand-lg fixed-top text-white bg-white clean-navbar">
-        <div class="container"><a class="navbar-brand text-white logo" href="../index.html">OdontoSync</a><button data-toggle="collapse" class="navbar-toggler text-white" data-target="#navcol-1"><span class="text-white sr-only">Toggle navigation</span><span class="navbar-toggler-icon text-white"></span></button>
+        <div class="container"><a class="navbar-brand text-white logo" href="../">OdontoSync</a><button data-toggle="collapse" class="navbar-toggler text-white" data-target="#navcol-1"><span class="text-white sr-only">Toggle navigation</span><span class="navbar-toggler-icon text-white"></span></button>
             <div class="collapse navbar-collapse text-white" id="navcol-1">
                 <ul class="nav navbar-nav text-white ml-auto">
-                    <li class="nav-item text-white"><a class="nav-link text-white" href="../index.html">início</a></li>
+                    <li class="nav-item text-white"><a class="nav-link text-white" href="../">início</a></li>
                     <li class="nav-item text-white"><a class="nav-link text-white" href="pages/about-us.html">sobre</a></li>
                     <li class="nav-item text-white"><a class="nav-link text-white" href="contact-us.html">contato</a></li>
                     <li class="nav-item"><a class="nav-link btn bg-white btn-acess" href="../assets/php/logout.php">sair</a></li>
@@ -175,7 +175,7 @@ include('../assets/php/fetchs/get_dataHorario.php');
     <footer class="footer-basic">
         <ul class="list-inline">
             <li class="list-inline-item"></li>
-            <li class="list-inline-item"><a href="../index.html" style="font-size: 12px;">Inicio</a></li>
+            <li class="list-inline-item"><a href="../" style="font-size: 12px;">Inicio</a></li>
             <li class="list-inline-item" style="font-size: 10px;"><a href="about-us.html" style="font-size: 12px;">Sobre</a></li>
             <li class="list-inline-item" style="font-size: 10px;"><a href="contact-us.html" style="font-size: 12px;">Contato</a></li>
             <li class="list-inline-item" style="font-size: 10px;"><a href="https://github.com/b-andersonlucas/OdontoSync" target="blank" style="font-size: 12px;">Github</a></li>

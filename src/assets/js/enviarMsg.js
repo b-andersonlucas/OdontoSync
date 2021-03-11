@@ -12,9 +12,9 @@ function enviar_msg_contato() {
 //FUNCAO REQUISITADA NA PAGINA src/pages/page-search.html
 function enviar_msg_retorno() {
     var id_nomeCliente = document.getElementById('nomeCliente').value
-    var id_telCliente = document.getElementById('tel_cliente').value
-    var id_dataRetorno = document.getElementById('dia_retorno').value
-    var id_msgRetorno = document.getElementById('msg_retorno').value
+    var id_telCliente = document.getElementById('telefoneCliente').value
+    var id_dataRetorno = document.getElementById('diaRetorno').value
+    var id_msgRetorno = document.getElementById('msgRetorno').value
     
     //Formatando data
     let diaObj = new Date(id_dataRetorno)
@@ -23,6 +23,8 @@ function enviar_msg_retorno() {
     let yyyy = diaObj.getFullYear()
 
     var diaFormatada = dd + "/" + mm + "/" + yyyy
+
+    id_telCliente = id_telCliente.replace('', "")
 
     var id_linkRetorno = document.getElementById('link_enviar_msg')
     .setAttribute("href", `https://wa.me/+55${id_telCliente}?text=Olá ${id_nomeCliente}!%0aSeu retorno será dia ${diaFormatada}%0a${id_msgRetorno}%0aAtenciosamente, ${clinica}!`)

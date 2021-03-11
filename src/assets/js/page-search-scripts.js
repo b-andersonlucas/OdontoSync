@@ -43,17 +43,4 @@ $(document).ready(function() {
     });
 });
 
-//FORMULARIO DE RETORNO
-$(document).ready(function() {
-    $('#btn_carregar').click('change', function() {
-        var nome_pessoa = $('#nomePessoa').text();
-        //var tel_people = $('#telPeople').text();
-        //se utilizar tel_people será necessário formatar
-
-        $("#nomeCliente").val(nome_pessoa);
-        //$('#tel_client').val(tel_people);
-    });
-});
-
-
 

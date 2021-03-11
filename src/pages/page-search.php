@@ -58,15 +58,17 @@ include('../assets/php/fetchs/authenticate-priv.php');
                 <div class="text-left" style="background: white;border-radius: 10px;padding-top: 15px;padding-bottom: 15px;padding-right: 12px;padding-left: 12px;">
                     <h3 class="title-table" style="margin-bottom: 22px;">Resultado da pesquisa</h3>
                     <div class="table-responsive">
-                        <table class="table">
+                        <table class="table" id="tabela">
                             <thead>
                                 <tr>
                                     <th style="width: 350px;">Nome</th>
                                     <th>Email<br></th>
+                                    <th>Visualizar dados</th>
                                 </tr>
                             </thead>
                             <tbody id="tablePesquisa">
                                 <tr>
+                                    <td>-</td>
                                     <td>-</td>
                                     <td>-</td>
                                 </tr>
@@ -83,7 +85,7 @@ include('../assets/php/fetchs/authenticate-priv.php');
                     <div class="form-row padMar">
                         <div class="col padMar">
                             <div class="input-group">
-                                <div class="input-group-prepend"></div><input id="inputEmail" class="form-control" type="text" placeholder="E-mail do cliente">
+                                <div class="input-group-prepend"></div><input id="inputEmail"  class="form-control" type="text" placeholder="E-mail do cliente">
                                 <div class="input-group-append"><button id="btn_visualizar" class="btn btn-primary btn-main" type="button"><i class="fa fa-arrow-right"></i></button></div>
                             </div>
                         </div>
@@ -132,13 +134,13 @@ include('../assets/php/fetchs/authenticate-priv.php');
         <section id="service-return" class="clean-block payment-form dark" style="padding-top: 7px;padding-right: 0px;padding-bottom: 65px;">
             <div class="container">
                 <div class="text-left" style="background: #ffffff;border-style: none;border-radius: 10px;padding-top: 10px;padding-right: 10px;padding-bottom: 32px;padding-left: 15px;">
-                    <h3 class="title-table d-flex justify-content-between" style="margin-bottom: 22px;">Informar Retorno <small id="btn_carregar" class="btn btn-primary btn-main" style="font-size: 14px;">Carregar Nome</small></h3>
+                    <h3 class="title-table d-flex justify-content-between" style="margin-bottom: 22px;">Informar Retorno</h3>
                     <div>
                         <form class="form-default" style="padding-top: 10px;padding-right: 10px;padding-bottom: 10px;padding-left: 10px;">
                             <div class="form-group"><label>Nome</label><input class="form-control" type="text" id="nomeCliente"></div>
-                            <div class="form-group"><label>Telefone</label><input class="form-control" type="tel" id="tel_cliente"></div>
-                            <div class="form-group"><label>Dia de retorno</label><input class="form-control" type="date" id="dia_retorno"></div>
-                            <div class="form-group"><label>Mensagem</label><textarea class="form-control" id="msg_retorno"></textarea></div>
+                            <div class="form-group"><label>Telefone</label><input class="form-control" type="tel" id="telefoneCliente"></div>
+                            <div class="form-group"><label>Dia de retorno</label><input class="form-control" type="date" id="diaRetorno"></div>
+                            <div class="form-group"><label>Mensagem</label><textarea class="form-control" id="msgRetorno"></textarea></div>
                             <div class="form-row">
                                 <div class="col text-right"><a class="btn btn-primary btn-main" id="link_enviar_msg" onclick="enviar_msg_retorno()" target="blank">Enviar mensagem</a></div>
                             </div>
@@ -198,6 +200,7 @@ include('../assets/php/fetchs/authenticate-priv.php');
     <script src="https://kit.fontawesome.com/1404112e2c.js" crossorigin="anonymous"></script>
     <script src="../assets/js/enviarMsg.js"></script>
     <script src="../assets/js/page-search-scripts.js"></script>
+    <script src="../assets/js/visualizarDados.js"></script>
 </body>
 
 </html>

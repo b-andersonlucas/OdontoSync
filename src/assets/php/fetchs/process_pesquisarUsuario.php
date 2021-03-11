@@ -12,10 +12,14 @@
     while($linha = mysqli_fetch_array($resultado_pessoas))  
     {  
          $saida_pesquisa .= '  
-         <tr>  
-              <td>' .$linha["nome"]. '</td>  
-              <td>'.$linha["email"].'</td>    
-         </tr>  
+               <tr>  
+                    <td>' .$linha["nome"]. '</td>  
+                    <td value="'.$linha["email"].'">'.$linha["email"].'</td>
+                    <td> <button onclick="enviar_visualizar(event)" value="'.$linha["email"].'"  class="btn btn-primary btn-main" type="button" style="margin-left: 12px">
+                              <i class="far fa-eye"></i>
+                         </button>
+                    </td>
+               </tr>  
          ';  
     }  
 

@@ -7,17 +7,19 @@ if(isset($_POST["dentista"])){
     $dentistaEmail = $_POST["dentista"];
     $dia__selecionado = $_POST["diaAlvo"];
 
-    $sql_select = "SELECT * FROM agenda_dentista WHERE dentista_email = '".$dentistaEmail."' AND dia = '".$dia__selecionado."' ORDER BY dia DESC";
+    $sql_select = "SELECT * FROM agenda_dentista WHERE dentista_email = '".$dentistaEmail."' AND dia = '".$dia__selecionado."'";
     $resultado = mysqli_query($con, $sql_select);
     
 
     $linha = mysqli_fetch_array($resultado, MYSQLI_BOTH);
 
-    $inicio_ex = strtotime($linha["inicio_ex"]);
-    $fim_ex = strtotime($linha["fim_ex"]);
+    $inicio_ex = strtotime($linha["inicio_ex"])+(60*60);
+    $fim_ex = strtotime($linha["fim_ex"])+(60*60);
     $numClientes = $linha["n_clientes"];
     $dia = $linha["dia"];
+    
     $intervalo = ($fim_ex - $inicio_ex)/$numClientes;
+    
     
     $cont = 1;
     while($cont < $numClientes+1) {

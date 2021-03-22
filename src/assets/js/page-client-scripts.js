@@ -38,12 +38,12 @@ $(document).ready(function(){
 
     $('#inputDentista').change(function() {
         var dentistaSelecionado = $(this).val();
+        var diaSelecionado = $('#inputDia').val();
 
         $.ajax({
             url:"../assets/php/fetchs/get_horario.php",
             method:"POST",
-            data:{dentista:dentistaSelecionado},
-            dataType:"text",
+            data:{dentista:dentistaSelecionado, diaAlvo:diaSelecionado},
             success:function(hora) {
                 $('#inputHora').html(hora);
             }

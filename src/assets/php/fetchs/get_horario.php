@@ -5,8 +5,9 @@ if(isset($_POST["dentista"])){
     $horarios = '';
 
     $dentistaEmail = $_POST["dentista"];
+    $dia__selecionado = $_POST["diaAlvo"];
 
-    $sql_select = "SELECT * FROM agenda_dentista WHERE dentista_email = '".$dentistaEmail."' ORDER BY dia DESC";
+    $sql_select = "SELECT * FROM agenda_dentista WHERE dentista_email = '".$dentistaEmail."' AND dia = '".$dia__selecionado."' ORDER BY dia DESC";
     $resultado = mysqli_query($con, $sql_select);
     
 
